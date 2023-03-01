@@ -254,12 +254,14 @@
  .hero-btn {
    color: var(--clr-green);
    padding: 0.3rem 4rem;
+   border: none;
  }
 
  .hero-btn:hover {
    background-color: transparent;
    color: var(--clr-light-black);
    transition: all 0.5s ease;
+   border: 1px solid var(--clr-light-black);
  }
 
   /* Navigation
