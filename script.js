@@ -1,4 +1,4 @@
-// Navigation
+// Navigation responsive
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -12,16 +12,9 @@ document.querySelectorAll(".nav-link").forEach(n=>n.addEventListener("click", ()
    navMenu.classList.remove("active");
 }));
 
-// Cursor
-const cursor = document.querySelector(".cursor");
-document.addEventListener("mousemove", (e)=> {
-   cursor.style.left = e.pageX + "px";
-   cursor.style.top = e.pageY + "px";
-});
-
 // To the top of the page
 const toTop = document.querySelector("#toTop");
+
 toTop.addEventListener("click", ()=> {
-  
    window.scrollTo({ top: 0, behavior: "smooth"});
 });

@@ -17,6 +17,8 @@
       href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Unbounded:wght@200;400;600;700;800&display=swap"
       rel="stylesheet">
    <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/968ab2ea9d.js" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
 </head>
 
 <body>
@@ -30,13 +32,13 @@
             </a>
             <ul class="nav-menu" role="list">
                <li class="nav-item">
-                  <a href="#" class="nav-link">portfolio</a>
+                  <a href="#portfolio" class="nav-link">portfolio</a>
                </li>
                <li class="nav-item">
-                  <a href="#" class="nav-link">about</a>
+                  <a href="#aboutMe" class="nav-link">about</a>
                </li>
                <li class="nav-item">
-                  <a href="#" class="nav-link">contact</a>
+                  <a href="#contact" class="nav-link">contact</a>
                </li>
             </ul>
             <div class="hamburger">
@@ -50,16 +52,18 @@
 
    <main>
       <section class="container">
-         <div class="flex-column hero-section margin-bottom">
-            <h1 class="ff-heading fs-primary-heading uppercase hero-title">Web <br> developer</h1>
-            <div class="cursor"></div>
-            <h2 class="fs-550"><span class="hero-titile-name fs-600 heading-color">Sabina Kutniauske</span> with</h2>
-            <h2 class="fs-550">HTML, CSS, Javascript skills</h2>
-            <button class="hero-btn bg-light-black border-radius">Hire me</button>
+         <div class="hero-wrapper">
+            <div class="flex-column hero-section margin-bottom">
+               <h1 class="ff-heading fs-primary-heading uppercase hero-title">Web <br> developer</h1>
+               <h2 class="fs-550"><span class="hero-titile-name fs-600 heading-color">Sabina Kutniauske</span> with</h2>
+               <h2 class="fs-550">HTML, CSS, Javascript skills</h2>
+               <a href="#portfolio" class="hero-btn bg-light-black border-radius text-center">Portfolio</a>
+            </div>
+            <div class="hero-animation" id="animation"></div>
          </div>
       </section>
 
-      <section class="bg-light-black">
+      <section class="bg-light-black" id="portfolio">
          <div class="container">
             <h2 class="ff-heading fs-primary-heading heading-color uppercase text-center portfolio-title">Portfolio</h2>
             <div class="portfolio-wrapper">
@@ -83,7 +87,7 @@
                <figure class="portfolio-item">
                   <span class="vertical-line"></span>
                   <h3 class="fs-900 margin-bottom-half">03</h3>
-                  <h4 class="clr-green fs-500 uppercase">The sweet cactus</h4>
+                  <h4 class="clr-green fs-500 uppercase">Sweet cactus</h4>
                   <img class="portfolio-img margin-bottom-half" src="images/sweet-cactus-blog-portfolio.jpg" alt="Portfolio image of the sweet cactus website">
                   <p class="portfolio-text fw-extra-light fs-400 margin-bottom-half">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias error autem commodi corrupti unde amet tenetur itaque magnam, sequi, provident id, non sint blanditiis beatae! Odit corporis dolor ipsa voluptates saepe expedita maiores sequi repudiandae, sapiente explicabo assumenda atque necessitatibus consequatur quisquam at omnis. Laboriosam totam exercitationem omnis animi aliquid.</p>
                   <a class="clr-green" href="https://legendary-madeleine-4f1023.netlify.app/" target="_blank" rel="noopener noreferrer" title="The sweet cactus link opens in a new window">Link to the live website</a>
@@ -93,7 +97,7 @@
          </div>
       </section>
 
-      <section class="about">
+      <section class="about" id="aboutMe">
          <div class="container">
             <h2 class="ff-heading fs-primary-heading heading-color uppercase about-title">About <span class="about-dot">.</span></h2>
             <p class="paragraph-text fs-500 margin-auto">Hey, I'm Sabina. By now you should already have a good grasp of what I do. Let me share with you a bit about myself. I'm open-minded, constantly pushing myself and trying to explore new boundaries. I'm constantly evolving, learning, and growing so you can expect that working with me will be a fun and exciting ride. 
@@ -101,20 +105,29 @@
          </div>
       </section>
 
-      <section class="contact">
+      <section class="contact" id="contact">
          <div class="contact-wrapper">
                <h2 class="ff-heading fs-primary-heading heading-color uppercase">Contact me</h2>
                <h2 class="ff-heading fs-primary-heading heading-color uppercase">Contact me</h2> 
                <h2 class="ff-heading fs-primary-heading heading-color uppercase">Contact me</h2> 
          </div>
-         <p class="paragraph-text fs-500 margin-auto">I'm always open to new opportunities: full-time, part-time, freelance, and contract.</p> 
-         <p class="paragraph-text fs-500 margin-auto">Please email me at:</p> 
-         <a class="paragraph-text fs-500 text-center fs-600 fw-semi-bold margin-auto" href="mailto:sabina.kutniauske@gmail.com">sabina.kutniauske@gmail.com</a>
-         <a href="" id="toTop">
-            <div class="up-arrow"></div>
-            <p class="up-word fw-semi-bold fs-450">up</p>
-            <span class="up-line"></span>
-         </a>
+         <div class="container">
+            <p class="paragraph-text fs-500 margin-auto">I'm always open to new opportunities: full-time, part-time, freelance, and contract.</p>
+            <p class="paragraph-text fs-450 margin-auto">Please email me at:</p>
+            <a class="paragraph-text fs-500 fw-semi-bold email" href="mailto:sabina.kutniauske@gmail.com">sabina.kutniauske@gmail.com</a>
+            <p class="paragraph-text fs-450 margin-auto">Download my resume:</p>
+            <a class="paragraph-text fs-500 fw-semi-bold margin-auto" href="images/sabina-kutniauke-resume.pdf" download title="Click to download">Resume</a>
+            <p class="paragraph-text fs-450 margin-auto">Social links:</p>
+            <div class="social-links">
+               <a class="fs-700 fw-semi-bold" target="_blank" rel="noopener noreferrer" title="Github opens in a new window" href="https://github.com/saibia8"><i class="fa-brands fa-github"></i></a>
+               <a class="fs-700 fw-semi-bold" target="_blank" rel="noopener noreferrer" title="Linkedin opens in a new window" href="https://www.linkedin.com/in/sabina-kutniauske-46a486238/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="#" id="toTop">
+               <div class="up-arrow"></div>
+               <p class="up-word fw-semi-bold fs-450">up</p>
+               <span class="up-line"></span>
+            </a>
+         </div>
       </section>
    </main>
 
@@ -126,6 +139,7 @@
          </a>
          <p class="fw-semi-bold">&copy; 2023</p>
    </footer>
+   <script src="animation.js"></script>
    <script src="script.js"></script>
 </body>
 
