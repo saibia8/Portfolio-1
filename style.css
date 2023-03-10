@@ -2,12 +2,11 @@
    --clr-light-black: #2F2F2F;
    --clr-black: #202020;
    --clr-purple: #ee2c9d;
-   --clr-orange: #EB785D;
    --clr-green: #D6FF41;
    --clr-grey: #CBCBCB;
  
    --ff-primary: "Unbounded", cursive;
-   --ff-heading: "Climate Crisis", cursive;
+   --ff-heading: "Climate Crisis", serif;
  
    --fw-extra-light: 200;
    --fw-regular: 400;
@@ -121,10 +120,6 @@
    font-family: var(--ff-heading);
  }
 
- .clr-orange {
-  color: var(--clr-orange);
- }
-
  .clr-green {
   color: var(--clr-green);
  }
@@ -212,6 +207,10 @@
  .margin-bottom-half {
    margin-bottom: var(--margin-bottom-half);
  }
+
+ .margin-top {
+  margin-top: 1rem;
+ }
  
  .margin-auto {
    margin: 0 auto;
@@ -260,21 +259,17 @@
   justify-content: flex-start;
 }
 
-  p:not(.nav-logo),
+  p:not(.nav-logo, footer p),
  .paragraph-text {
   max-width: 660px;
   line-height: 35px;
   margin-bottom: 1rem;
 }
 
-.about {
-  height: 100vh;
-}
-
   /* Hero section
  ------------------------------------------*/
  .hero-section {
-  margin-top: 3rem;
+  margin-top: 2rem;
  }
 
  .hero-title {
@@ -309,20 +304,19 @@
   display: flex;
   gap: 2rem;
   justify-content: space-between;
-  flex-wrap: wrap;
  }
 
   /* Portfolio section
  ------------------------------------------*/
- .portfolio-item {
-  display: flex;
-  flex-direction: column;
- }
-
  .portfolio-wrapper {
   display: flex;
   gap: 3rem;
-  flex: 1;
+ }
+
+ .portfolio-item {
+  display: flex;
+  flex-direction: column;
+
  }
 
  .portfolio-item h3 {
@@ -339,17 +333,19 @@
   margin-bottom: 2.5rem;
   border-bottom: 1px solid var(--clr-light-black);
  }
+
 .portfolio-item a:hover {
   border-bottom: 1px solid var(--clr-green);
 }
 
  .portfolio-item .portfolio-text {
   color: var(--clr-grey);
+  height: 100%;
  }
 
  .portfolio-item .vertical-line {
   background-color: var(--clr-grey);
-  height: 50rem;
+  height: 60rem;
   width: 1px;
   position: absolute;
   margin-left: -25px;
@@ -368,6 +364,11 @@
   font-size: 10rem;
   margin-left: -15px;
   color: var(--clr-light-black);
+}
+
+.about-title,
+.about-dot {
+  margin-top: -2.5rem;
 }
 
 /* Contact me section
@@ -420,7 +421,7 @@
   color: var(--clr-purple);
  }
 
-  .contact-wrapper {
+ .contact-wrapper {
   display: flex;
   justify-content: flex-start;
   background: var(--clr-light-black);
@@ -446,6 +447,10 @@
  .contact .email {
   margin: 1rem auto 3rem auto;
   word-break: break-word;
+ }
+
+ .contact-p-text p {
+  margin: 0 auto;
  }
 
  .social-links {
@@ -589,9 +594,29 @@
       outline: 1px solid var(--clr-grey);
    }
 
+   .hero-wrapper {
+    flex-direction: column;
+    gap: 0;
+    height: 30rem;
+   }
+
+   .hero-animation {
+    max-height: 20rem;
+    align-self: center;
+   }
+
    .hero-title {
     line-height: 80px;
+    margin-bottom: 1.5rem;
    }
+
+   .hero-btn {
+    margin-top: 2rem;
+   }
+
+   .hero-wrapper h2 {
+    font-size: var(--fs-450);
+  }
 
    .hero-section p,
    .hero-section span{
@@ -602,27 +627,12 @@
     margin-top: 1.5rem;
    }
 
-   .about-dot {
+  .about-dot {
     font-size: 6rem;
    }
 }
 
-@media (max-width: 30rem) {
-  .hero-title {
-    font-size: var(--fs-550);
-    line-height: 50px;
-  }
-
-  .portfolio-title {
-    font-size: var(--fs-600);
-  }
-
-  .portfolio-wrapper figure h3 {
-    font-size: var(--fs-600);
-  }
-}
-
-@media (max-width: 62.5rem) {
+@media (max-width: 62.5em) {
   .portfolio-wrapper {
     flex-direction: column;
   }
@@ -633,10 +643,96 @@
   }
 
   .portfolio-item img {
-    width: 70%;
+    width: 85%;
+  }
+
+  .portfolio-item p {
+    line-height: 28px;
+  }
+
+  .portfolio-title {
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .portfolio-wrapper figure h3 {
+    font-size: var(--fs-600);
   }
   
   .portfolio-item .vertical-line {
     display: none;
    }
+
+  .hero-animation {
+    position: relative;
+    bottom: 50px;
+  }
+}
+
+@media (max-width: 69em) {
+  .hero-title {
+    font-size: var(--fs-700);
+    line-height: 50px;
+    margin-bottom: var(--margin-bottom-half);
+  }
+}
+
+@media (max-width: 34em) {
+.portfolio-item {
+  width: 100%;
+}
+}
+
+@media (max-width: 30em) {
+  .hero-wrapper h2 {
+    font-size: var(--fs-400);
+  }
+
+  .hero-btn {
+    margin-top: 2rem;
+  }
+
+  .portfolio-title,
+  .about-title {
+    font-size: var(--fs-550);
+  }
+
+  .about-dot {
+    font-size: var(--fs-900);
+    margin-left: 3px;
+  }
+
+  .portfolio-wrapper figure h3 {
+    font-size: var(--fs-600);
+  }
+
+  .hero-title {
+    font-size: var(--fs-550);
+    line-height: 35px;
+  }
+
+  .paragraph-text {
+    font-size: var(--fs-400);
+    line-height: 30px;
+  }
+
+  .contact p:first-of-type {
+    margin-top: 1rem;
+  }
+
+  .contact-p-text p {
+    margin-bottom: 8px;
+  } 
+
+  .contact .email {
+    margin-top: 0;
+  }
+
+  .social-links {
+    margin-top: -1.5rem;
+  }
+
+  .portfolio-wrapper {
+    gap: 2rem;
+  }
 }
