@@ -209,7 +209,7 @@
  }
 
  .margin-top {
-  margin-top: 1rem;
+  margin-top: 2rem;
  }
  
  .margin-auto {
@@ -270,6 +270,7 @@
  ------------------------------------------*/
  .hero-section {
   margin-top: 2rem;
+  height: 80vh;
  }
 
  .hero-title {
@@ -304,6 +305,7 @@
   display: flex;
   gap: 2rem;
   justify-content: space-between;
+  align-items: flex-start;
  }
 
   /* Portfolio section
@@ -601,7 +603,7 @@
    }
 
    .hero-animation {
-    max-height: 20rem;
+    max-height: 17rem;
     align-self: center;
    }
 
@@ -678,9 +680,9 @@
 }
 
 @media (max-width: 34em) {
-.portfolio-item {
-  width: 100%;
-}
+  .portfolio-item {
+    width: 100%;
+  }
 }
 
 @media (max-width: 30em) {
@@ -729,7 +731,7 @@
   }
 
   .social-links {
-    margin-top: -1.5rem;
+    margin-top: -1rem;
   }
 
   .portfolio-wrapper {
