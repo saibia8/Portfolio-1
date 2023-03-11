@@ -578,6 +578,7 @@
       background-color: var(--clr-black);
       text-align: center;
       transition: 0.3s;
+      z-index: 20;
    }
 
    .nav-link {
